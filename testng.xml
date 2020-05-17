@@ -3,9 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="base.Base"/>
       <class name="com.bridgelabz.LoginTest"/>
-       <class name="com.bridgelabz.SearchTest"/>
+      <class name="com.bridgelabz.SearchTest"/>
+      <class name="com.bridgelabz.CartHandleTest"/>
+      <class name="com.bridgelabz.CartCheckoutTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

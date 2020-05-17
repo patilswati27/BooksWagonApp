@@ -5,19 +5,20 @@ import java.awt.AWTException;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import base.Base;
 import pages.LoginPage;
 
 /**
  * @author Swati Patil
    To test loginpage
  */
-public class LoginTest extends base.Base{
+public class LoginTest extends Base{
 
     @BeforeTest
 	public void SetUp() {
     setUp();
 	}
-	@Test
+    @Test
 	public static void givenLoginPage_WhenEnterTheLoginDetail_ShouldLoginSuccessful() throws AWTException, InterruptedException {
 		LoginPage login=new LoginPage(driver);
 		login.login();

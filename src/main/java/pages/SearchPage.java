@@ -26,7 +26,7 @@ public class SearchPage extends Base {
 	WebElement searchBar;
 
 	@FindBy(id = "ctl00_TopSearch1_Button1")
-	WebElement clicked;
+	WebElement click;
 
 	public void SearchBar(String element) {
 		searchBar.sendKeys(element);  

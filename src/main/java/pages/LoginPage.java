@@ -37,7 +37,7 @@ public class LoginPage extends Base {
 		SignIn.click();
 	}
 	public void mail(String name) {
-		emailId.sendKeys(name);
+		emailId.sendKeys(name); 
 	}     
     public void password(String psw) {
 		pwd.sendKeys(psw);

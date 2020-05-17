@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.bridgelabz.CartCheckoutTest" hash-for-method="givenCustomersAddres_whenClickContinur_shouldlandOnNextpage">givenCustomersAddres_whenClickContinur_shouldlandOnNextpage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +116,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.bridgelabz.SearchTest" hash-for-method="givenAuthorName_whenSearchBook_ShouldReturnThisBook">givenAuthorName_whenSearchBook_ShouldReturnThisBook</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.bridgelabz.CartHandleTest" hash-for-method="buyNow">buyNow</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.bridgelabz.LoginTest" hash-for-method="givenLoginPage_WhenEnterTheLoginDetail_ShouldLoginSuccessful">givenLoginPage_WhenEnterTheLoginDetail_ShouldLoginSuccessful</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.bridgelabz.SearchTest" hash-for-method="givenPublisherName_whenSearchBook_ShouldReturnThisBook">givenPublisherName_whenSearchBook_ShouldReturnThisBook</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -122,21 +141,45 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.bridgelabz.SearchTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.bridgelabz.CartCheckoutTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="givenAuthorName_whenSearchBook_ShouldReturnThisBook">
-                  </a> <!-- givenAuthorName_whenSearchBook_ShouldReturnThisBook -->
-                  <span class="method-name">givenAuthorName_whenSearchBook_ShouldReturnThisBook</span>
+                  <a name="givenCustomersAddres_whenClickContinur_shouldlandOnNextpage">
+                  </a> <!-- givenCustomersAddres_whenClickContinur_shouldlandOnNextpage -->
+                  <span class="method-name">givenCustomersAddres_whenClickContinur_shouldlandOnNextpage</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to convert data to an object
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SWATI&apos;, ip: &apos;192.168.219.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 71.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20191202093317, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 15996, moz:profile: C:\Users\Swati Patil\AppDat..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f78cac1b-f9f2-4df7-bd92-752208d69c13
+*** Element info: {Using=xpath, value=//input[@id=&apos;ctl00_cpBody_txtNewRecipientName&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.sendKeys(Unknown Source)
+	at pages.ShippingAddress.recipitienName(ShippingAddress.java:60)
+	at com.bridgelabz.CartCheckoutTest.givenCustomersAddres_whenClickContinur_shouldlandOnNextpage(CartCheckoutTest.java:14)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -148,6 +191,36 @@
                   <a name="givenLoginPage_WhenEnterTheLoginDetail_ShouldLoginSuccessful">
                   </a> <!-- givenLoginPage_WhenEnterTheLoginDetail_ShouldLoginSuccessful -->
                   <span class="method-name">givenLoginPage_WhenEnterTheLoginDetail_ShouldLoginSuccessful</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.bridgelabz.CartHandleTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="buyNow">
+                  </a> <!-- buyNow -->
+                  <span class="method-name">buyNow</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.bridgelabz.SearchTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="givenPublisherName_whenSearchBook_ShouldReturnThisBook">
+                  </a> <!-- givenPublisherName_whenSearchBook_ShouldReturnThisBook -->
+                  <span class="method-name">givenPublisherName_whenSearchBook_ShouldReturnThisBook</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,9 +237,10 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;base.Base&quot;/&gt;
       &lt;class name=&quot;com.bridgelabz.LoginTest&quot;/&gt;
       &lt;class name=&quot;com.bridgelabz.SearchTest&quot;/&gt;
+      &lt;class name=&quot;com.bridgelabz.CartHandleTest&quot;/&gt;
+      &lt;class name=&quot;com.bridgelabz.CartCheckoutTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -180,7 +254,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (3 classes)</span>
+                <span class="test-name">Test (4 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -206,20 +280,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'givenAuthorName_whenSearchBook_ShouldReturnThisBook')
-data.setCell(0, 2, 'com.bridgelabz.SearchTest')
-data.setCell(0, 3, 12741);
+data.setCell(0, 1, 'givenCustomersAddres_whenClickContinur_shouldlandOnNextpage')
+data.setCell(0, 2, 'com.bridgelabz.CartCheckoutTest')
+data.setCell(0, 3, 17320);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'givenLoginPage_WhenEnterTheLoginDetail_ShouldLoginSuccessful')
-data.setCell(1, 2, 'com.bridgelabz.LoginTest')
-data.setCell(1, 3, 12550);
+data.setCell(1, 1, 'buyNow')
+data.setCell(1, 2, 'com.bridgelabz.CartHandleTest')
+data.setCell(1, 3, 10301);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'givenLoginPage_WhenEnterTheLoginDetail_ShouldLoginSuccessful')
+data.setCell(2, 2, 'com.bridgelabz.LoginTest')
+data.setCell(2, 3, 5710);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'givenPublisherName_whenSearchBook_ShouldReturnThisBook')
+data.setCell(3, 2, 'com.bridgelabz.SearchTest')
+data.setCell(3, 3, 172);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -234,9 +316,30 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.bridgelabz.CartCheckoutTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.bridgelabz.CartHandleTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.bridgelabz.SearchTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -252,19 +355,40 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">givenLoginPage_WhenEnterTheLoginDetail_ShouldLoginSuccessful</span>
-                <span class="method-start">165538 ms</span>
+                <span class="method-start">18766 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.bridgelabz.SearchTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setup</span>
-                <span class="method-start">178161 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">givenAuthorName_whenSearchBook_ShouldReturnThisBook</span>
-                <span class="method-start">217760 ms</span>
+                <span class="method-name">givenPublisherName_whenSearchBook_ShouldReturnThisBook</span>
+                <span class="method-start">24483 ms</span>
               </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.bridgelabz.CartHandleTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">buyNow</span>
+                <span class="method-start">24659 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.bridgelabz.CartCheckoutTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">givenCustomersAddres_whenClickContinur_shouldlandOnNextpage</span>
+                <span class="method-start">34964 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.bridgelabz.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">tearDown</span>
+                <span class="method-start">52368 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

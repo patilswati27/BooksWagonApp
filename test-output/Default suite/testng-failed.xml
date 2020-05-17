@@ -3,12 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.bridgelabz.LoginTest">
+      <class name="com.bridgelabz.CartCheckoutTest">
         <methods>
-          <include name="SetUp"/>
-          <include name="givenLoginPage_WhenEnterTheLoginDetail_ShouldLoginSuccessful"/>
+          <include name="givenCustomersAddres_whenClickContinur_shouldlandOnNextpage"/>
         </methods>
-      </class> <!-- com.bridgelabz.LoginTest -->
+      </class> <!-- com.bridgelabz.CartCheckoutTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

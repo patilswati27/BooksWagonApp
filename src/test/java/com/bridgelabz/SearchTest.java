@@ -9,19 +9,16 @@ import org.testng.annotations.Test;
 import base.Base;
 import pages.SearchPage;
 
+/**
+ * @author Swati Patil
+ * purpose:To test search functionality of app
+ */
 public class SearchTest extends Base {
-	
-	@BeforeClass
-	public void setup() {
-	setUp();
+	@Test
+	public static void givenPublisherName_whenSearchBook_ShouldReturnThisBook()
+			throws AWTException, InterruptedException {
+		SearchPage search = new SearchPage(driver);
+		search.SearchBar("Xlibris Corporation");
+		search.onClick();
 	}
-
-@Test
-public static void givenAuthorName_whenSearchBook_ShouldReturnThisBook() throws AWTException, InterruptedException{
-	
-LoginTest loginCustomer=new LoginTest();
-SearchPage search= new SearchPage(driver);
-search.SearchBar("bookchef");
-search.onClick();
-}
 }
